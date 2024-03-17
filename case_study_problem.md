@@ -52,4 +52,5 @@ These tables are used only for the bonus question where we will use them to recr
 
 ## Solutions
 For explantion check [here](https://github.com/NgocHueLy/balanced_tree_clothing/blob/main/sql_solutions.md)
+\
 For scripts: [here](https://github.com/NgocHueLy/balanced_tree_clothing/blob/main/sql_cs7.sql)
