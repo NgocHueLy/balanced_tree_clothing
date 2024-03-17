@@ -8,7 +8,7 @@
 
 
 ## Summary
-This file note down my solutions & explanation for project "Balanced Tree Clothing" using PostgreSQL Check the problem here.
+This file note down my solutions & explanation for project "Balanced Tree Clothing" using PostgreSQL Check the problem [here]([https://github.com/NgocHueLy/balanced_tree_clothing/blob/main/case_study_problem.md]).
 
 
 ## Solution
