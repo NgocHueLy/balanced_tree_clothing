@@ -20,6 +20,7 @@ balanced_tree.sales contains product level information for all the transactions 
 
 **Product Hierarcy & Product Price**
 These tables are used only for the bonus question where we will use them to recreate the balanced_tree.product_details table.
+
 ![Alt text](image.png)
 
 ## Case Study Questions
@@ -50,4 +51,6 @@ These tables are used only for the bonus question where we will use them to recr
 10.	What is the most common combination of at least 1 quantity of any 3 products in a 1 single transaction?
 
 ## Solutions
-Check here
+For explantion check [here](https://github.com/NgocHueLy/balanced_tree_clothing/blob/main/sql_solutions.md)
+\
+For scripts: [here](https://github.com/NgocHueLy/balanced_tree_clothing/blob/main/sql_cs7.sql)
