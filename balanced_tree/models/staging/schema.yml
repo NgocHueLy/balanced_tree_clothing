@@ -7,4 +7,75 @@ sources:
     tables:
       - name: sales
       - name: product_details
+
+models:
+  - name: stg_product_details
+    description: "staging model for source product details"
+    columns:
+      - name: product_id
+        data_type: character varying
+        description: "primary key for product"
+
+      - name: price
+        data_type: integer
+        description: "product's price"
+
+      - name: product_name
+        data_type: character varying
+        description: "name of product"
+
+      - name: category_id
+        data_type: integer
+        description: ""
+
+      - name: segment_id
+        data_type: integer
+        description: ""
+
+      - name: style_id
+        data_type: integer
+        description: ""
+
+      - name: category_name
+        data_type: character varying
+        description: "product category name"
+
+      - name: segment_name
+        data_type: character varying
+        description: "product segment name"
+
+      - name: style_name
+        data_type: character varying
+        description: "product style name"
   
+  
+  - name: stg_sales
+      description: "staging model for source sales which is transaction orders"
+      columns:
+        - name: prod_id
+          data_type: character varying
+          description: "product_id"
+
+        - name: qty
+          data_type: integer
+          description: "ordered quantity"
+
+        - name: price
+          data_type: integer
+          description: "product price"
+
+        - name: discount
+          data_type: integer
+          description: "discount percent on price"
+
+        - name: member
+          data_type: boolean
+          description: "whether the customer is a member or not"
+
+        - name: txn_id
+          data_type: character varying
+          description: "transaction_id"
+
+        - name: start_txn_time
+          data_type: timestamp without time zone
+          description: "timestamp when a transaction take places"
