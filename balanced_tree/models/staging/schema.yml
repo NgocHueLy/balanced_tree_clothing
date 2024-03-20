@@ -1,81 +1,160 @@
 version: 2
 
-sources:
-  - name: staging
-    database: dbt
-    schema: balanced_tree
-    tables:
-      - name: sales
-      - name: product_details
-
 models:
-  - name: stg_product_details
-    description: "staging model for source product details"
+  - name: dim_dates
+    description: date dimentions table"
+    columns:
+      - name: date
+        data_type: date
+        description: "date from 2021-01-01 to 2021-03-31"
+
+      - name: year
+        data_type: double precision
+        description: ""
+
+      - name: month
+        data_type: double precision
+        description: ""
+
+      - name: month_name
+        data_type: text
+        description: ""
+
+      - name: day
+        data_type: double precision
+        description: ""
+
+      - name: day_of_year
+        data_type: double precision
+        description: ""
+
+      - name: weekday_name
+        data_type: text
+        description: ""
+
+      - name: calendar_week
+        data_type: double precision
+        description: ""
+
+      - name: formatted_date
+        data_type: text
+        description: "date formatted as yyyy.mm.dd"
+
+      - name: quartal
+        data_type: text
+        description: ""
+
+      - name: year_quartal
+        data_type: text
+        description: ""
+
+      - name: year_month
+        data_type: text
+        description: ""
+
+      - name: year_calendar_week
+        data_type: text
+        description: ""
+
+      - name: weekend
+        data_type: text
+        description: ""
+
+      - name: american_holiday
+        data_type: text
+        description: "whether a date is an American Holiday"
+
+      - name: austrian_holiday
+        data_type: text
+        description: "whether a date is an Autrian Holiday"
+
+      - name: canadian_holiday
+        data_type: text
+        description: "whether a date is a Canadian Holiday"
+
+      - name: period
+        data_type: text
+        description: ""
+
+      - name: calendar_week_start
+        data_type: date
+        description: ""
+
+      - name: calander_week_end
+        data_type: date
+        description: ""
+
+      - name: month_start
+        data_type: date
+        description: "start of month of this date"
+
+      - name: month_end
+        data_type: timestamp without time zone
+        description: "end of month of this date"
+
+  - name: stg_sales
+    description: "transaction model for dashboard, granularity level at product_id per transaction"
     columns:
       - name: product_id
         data_type: character varying
-        description: "primary key for product"
-
-      - name: price
-        data_type: integer
-        description: "product's price"
+        description: ""
 
       - name: product_name
         data_type: character varying
-        description: "name of product"
-
-      - name: category_id
-        data_type: integer
         description: ""
 
-      - name: segment_id
-        data_type: integer
+      - name: style_name
+        data_type: character varying
         description: ""
 
-      - name: style_id
-        data_type: integer
+      - name: segment_name
+        data_type: character varying
         description: ""
 
       - name: category_name
         data_type: character varying
-        description: "product category name"
+        description: ""
 
-      - name: segment_name
+      - name: quantity
+        data_type: integer
+        description: ""
+
+      - name: price
+        data_type: integer
+        description: ""
+
+      - name: discount_percentage
+        data_type: integer
+        description: ""
+
+      - name: revenue
+        data_type: integer
+        description: ""
+
+      - name: member
+        data_type: boolean
+        description: ""
+
+      - name: transaction_id
         data_type: character varying
-        description: "product segment name"
+        description: ""
 
-      - name: style_name
-        data_type: character varying
-        description: "product style name"
-  
-  
-  - name: stg_sales
-      description: "staging model for source sales which is transaction orders"
-      columns:
-        - name: prod_id
-          data_type: character varying
-          description: "product_id"
+      - name: transaction_datetime
+        data_type: timestamp without time zone
+        description: ""
 
-        - name: qty
-          data_type: integer
-          description: "ordered quantity"
+      - name: month
+        data_type: double precision
+        description: ""
 
-        - name: price
-          data_type: integer
-          description: "product price"
+      - name: month_name
+        data_type: text
+        description: ""
 
-        - name: discount
-          data_type: integer
-          description: "discount percent on price"
+      - name: weekday_name
+        data_type: text
+        description: ""
 
-        - name: member
-          data_type: boolean
-          description: "whether the customer is a member or not"
-
-        - name: txn_id
-          data_type: character varying
-          description: "transaction_id"
-
-        - name: start_txn_time
-          data_type: timestamp without time zone
-          description: "timestamp when a transaction take places"
+      - name: calendar_week
+        data_type: double precision
+        description: ""
