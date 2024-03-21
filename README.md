@@ -40,3 +40,5 @@ These models will available as Views/ Table in Postgres
 
 4. Create Dashboard
 Download dashboard [here](balanced_tree_clothing_dashboard.pbix).
+
+![image](https://github.com/NgocHueLy/balanced_tree_clothing/assets/45974044/548c9fb7-dc26-4619-9600-76f2318e5839)
